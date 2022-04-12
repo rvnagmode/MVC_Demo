@@ -15,9 +15,10 @@ namespace MVC_Demoo.Controllers
         
         public IActionResult FirstPage()
         {
-            ViewData["message"] = "this is my first MVC application";
-            List<string> color = new List<string>() { "orange,yellow ,blue,purple,voilet,red,brown,black" };
-
+            ViewData["message"] = "First MVC Application";
+            List<string> colors = new List<string>() { "orange","yellow" ,"blue","purple","voilet","red","brown", "black" };
+            ViewData["colorsList"] = colors;
+            ViewBag.Colors = colors;
             return View();
         }
 
