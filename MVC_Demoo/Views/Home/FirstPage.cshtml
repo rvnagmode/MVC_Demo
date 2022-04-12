@@ -1,0 +1,15 @@
+﻿<h1>Home page</h1>
+<h2>@ViewData["message"]</h2>
+
+@if(ViewData["colorLists"]!=null)
+{
+    <ul>
+    @foreach(var item in (IEnumerable<string>)ViewData["colorLists"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
+}
+
