@@ -1,5 +1,6 @@
 ﻿namespace MVC_Demoo.Models
 {
+    public enum Gender { Male,Female}
     public class Product
     {
         public int Id { get; set; }

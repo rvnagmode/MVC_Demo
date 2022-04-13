@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h3>Html helper demo</h3>
+@{Html.BeginForm();}
+@Html.Label("Enter Name") @Html.TextBox("t1")<br/>
+@Html.Label("Enter Address") @Html.TextArea("text")<br/>
+@Html.Label("Enter Password") @Html.Password("userpass")<br/>
+
+@Html.Label("Select Gender") Male @Html.RadioButton("Gender","Male")&nbsp;
+                             Female @Html.RadioButton("Gender","Female")<br/>
+
+@Html.Label("Select Gender")
+<select class ="form-control">
+    <option>Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+</select>
+<br/>
+@Html.DropDownList("Student Gender",
+                    new SelectList(Enum.GetValues(typeof(Gender))),
+                    "Select Gender",
+                    new { @class="form-control" })
+<br/>
+@Html.CheckBox("Select") I Agree
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary me-md-2" type="submit">Submit</button>
+</div>
+@{Html.EndForm();}
